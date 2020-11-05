@@ -27,6 +27,8 @@ build: mkdirs buildGAME clean
 
 all: mkdirs buildGAME clean runGAME
 
+run: runGAME
+
 buildGAME: $(GAMEOBJS) 
 	@echo "\n  Linking $(GAMENAME)..."
 	$(CC) -o $(OUTPUTDIR)/$(GAMENAME) $(GAMEOBJS) $(LDLIB) $(CFLAGS)
